@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>WAC</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="script.js"></script>
+
+	<style>
+		/* Chrome, Safari, Edge, Opera */
+		input::-webkit-outer-spin-button,
+		input::-webkit-inner-spin-button {
+		  -webkit-appearance: none;
+		  margin: 0;
+		}
+		
+		/* Firefox */
+		input[type=number] {
+		  -moz-appearance:textfield;
+		}
+		</style>
+</head>
+
+<body>
+	<header>
+        <nav class="navbar justify-content-center navbar-light">
+            <a class="navbar-brand centering zoom" href="#">
+                <h3>Weighted Average Calculator</h3>
+            </a>
+        </nav>
+    </header>
+	<div class="container">
+		<table id="table">
+			<tr>
+				<td>Weight (For decimal use point)</td>
+				<td>Marks (separated by comma)</td>
+			</tr>
+			<tr id="0">
+				<td><input type="text" class="input form-control" id="weight0" placeholder="1.5"></td>
+				<td><input type="text" class="input form-control" id="marks0" placeholder="1,2,3"></td>
+				<td><button type="button" class="deleteRow btn btn-danger" id="0">X</button></td>
+			</tr>
+
+		</table>
+		<button type="button" class="btn btn-primary" id="generateRow">Add row</button>
+		<button type="button" class="btn btn-success" id="calc">Calculate</button>
+		<h5 id="solution">Result: NaN</h5>
+		<p id="error"></p>
+	</div>
+
+</body>
+
+</html

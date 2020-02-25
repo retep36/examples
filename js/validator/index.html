@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form validator</title>
+	<script src="script.js"></script>
+</head>
+<body>
+	<form>
+		<label for="nejm">Meno*:</label>
+		<input type="text" name="meno" id="name" required><br>
+		<label for="srnejm">Priezvisko*:</label>
+		<input type="text" name="priezvisko" id="surname" required><br>
+		<label for="imejl">Email*:</label>
+		<input type="text" name="email" onKeyUp="validateForm()" value="" id="email1" required>
+		<span id="emailValid"></span><br>
+		<label for="imejl2">Kontrola emailu*:</label>
+		<input type="text" name="email2" id="email2" onKeyUp="validateForm()" disabled="true" required>
+		<span id="emailValid2"></span><br>
+		<label for="pasword">Heslo*:</label>
+		<input type="password" name="heslo" id="pass" onKeyUp="validateForm()" required><span id="strength"></span><br>	
+		<input type="submit" name="dokonc" value="Submit" disabled="true" id="odosli">
+	</form>
+
+
+	<script type="text/javascript">
+		console.log(document.body.childNodes);
+	</script>
+</body>
+</html>

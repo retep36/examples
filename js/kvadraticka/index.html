@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="utf-8">
+    <title>Kvadraticka rovnica</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href=" style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <p class="text">
+      Kvadratická rovnica - Javascript
+    </p>
+    <div class="main">
+      <input type="text" id="rovnica" placeholder="4x^2+4x-1" value="" onKeyUp="validateEquation()">
+      <input type="submit" id="rovnaSa" name="equal" value="=" disabled="true" onclick="vypocet()">
+    </div>
+    <div class="other">
+      <span id="vysledok"></span>
+      <p id="info"></p>
+    </div>
+  </body>
+</html>

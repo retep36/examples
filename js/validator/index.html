@@ -1,24 +1,84 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Form validator</title>
 	<script src="script.js"></script>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<style>
+		body {
+			background-color: #89ccdd;
+		}
+
+		.signup-content {
+			background: #fff;
+			border-radius: 10px;
+			-moz-border-radius: 10px;
+			-webkit-border-radius: 10px;
+			padding: 50px 85px;
+			height: auto;
+			margin: 0 auto;
+			width: 60%;
+		}
+
+		.form-group {
+			overflow: hidden;
+			margin-bottom: 20px;
+		}
+
+		.signup-title {
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		.btn-submit {
+			width: 100%;
+			background-image: -moz-linear-gradient(to left, #74ebd5, #9face6);
+			background-image: -ms-linear-gradient(to left, #74ebd5, #9face6);
+			background-image: -o-linear-gradient(to left, #74ebd5, #9face6);
+			background-image: -webkit-linear-gradient(to left, #74ebd5, #9face6);
+			background-image: linear-gradient(to left, #74ebd5, #9face6);
+		}
+
+		.phantomSection {
+			height: 10vh;
+		}
+
+		.form-text {
+			height: 3vh;
+		}
+	</style>
 </head>
+
 <body>
-	<form>
-		<label for="nejm">Meno*:</label>
-		<input type="text" name="meno" id="name" required><br>
-		<label for="srnejm">Priezvisko*:</label>
-		<input type="text" name="priezvisko" id="surname" required><br>
-		<label for="imejl">Email*:</label>
-		<input type="text" name="email" onKeyUp="validateForm()" value="" id="email1" required>
-		<span id="emailValid"></span><br>
-		<label for="imejl2">Kontrola emailu*:</label>
-		<input type="text" name="email2" id="email2" onKeyUp="validateForm()" disabled="true" required>
-		<span id="emailValid2"></span><br>
-		<label for="pasword">Heslo*:</label>
-		<input type="password" name="heslo" id="pass" onKeyUp="validateForm()" required><span id="strength"></span><br>	
-		<input type="submit" name="dokonc" value="Submit" disabled="true" id="odosli">
+	<div class="container">
+		<div class="phantomSection">
+
+		</div>
+		<div class="signup-content">
+			<form method="" class="signup-form">
+				<h4 class="signup-title">Create account</h4>
+				<div class="form-group">
+					<input type="text" name="meno" id="name" class="form-control" placeholder="Name" required><br>
+					<input type="text" name="priezvisko" id="surname" class="form-control" placeholder="Surname"
+						required><br>
+					<input type="text" name="email" onKeyUp="validateForm()" value="" id="email1" class="form-control"
+						placeholder="Email" required>
+					<span id="emailValid" class="form-text"> </span><br>
+					<input type="text" name="email2" id="email2" onKeyUp="validateForm()" disabled="true"
+						class="form-control" placeholder="Confirm email" required>
+					<span id="emailValid2" class="form-text"></span><br>
+					<input type="password" name="heslo" id="pass" onKeyUp="validateForm()" class="form-control"
+						placeholder="Password" required>
+					<span id="strength"> </span><br>
+				</div>
+				<input type="submit" name="dokonc" value="Submit" disabled="true" id="odosli" class="btn btn-submit">
+		</div>
+	</div>
+	</div>
 	</form>
 
 
@@ -26,4 +86,5 @@
 		console.log(document.body.childNodes);
 	</script>
 </body>
+
 </html>

@@ -7,7 +7,8 @@ colors = [
 
 offset = ['silver', 'gold', 'brown', 'red', 'green', 'white']
 
-let index, tmp1 = 1, tmp2 = 0, tmp3 = -2, tmp4 = -1, tmpx, prve, druhe, tretie, stvrte;
+var index, tmp1 = 1, tmp2 = 0, tmp3 = -2, tmp4 = -1, tmpx;
+var prve, druhe, tretie, stvrte;
 
 prve = document.getElementById("prve");
 prve.style.backgroundColor = colors[3];
@@ -17,7 +18,7 @@ tretie = document.getElementById("tretie");
 tretie.style.backgroundColor = colors[0];
 stvrte = document.getElementById("stvrte");
 stvrte.style.backgroundColor = offset[0];
-let daco = document.getElementById("score");
+var daco = document.getElementById("score");
 
 function changeColor(clickedId) {
     if (clickedId == 'prve') {
@@ -46,7 +47,8 @@ function changeColor(clickedId) {
     }
     setThirdValue();
     setFourthValue();
-    daco.innerHTML = tmp1.toString() + tmp2.toString() + tmp.toString() + ' ±' + tmpx + '%';
+    daco.innerHTML = tmp1.toString() + tmp2.toString() + tmp.toString() + '&#x2126; &#177;' + tmpx + '%';
+    prepocet(tmp1, tmp2, tmp, tmpx);
 }
 
 function setThirdValue(){
@@ -76,3 +78,30 @@ function setFourthValue(){
         default: break;
     }
 }
+
+function prepocet(tmp1, tmp2, tmp, tmpx){
+    var result = document.getElementById('hodnota');
+    var zaklad = tmp1 + '' + tmp2;
+    console.log(zaklad);
+    var nasobitel = (tmp.replace('x', ''));
+    switch(nasobitel){
+        case '0.01': nasobitel = 0.01; break;
+        case '0.1': nasobitel = 0.1; break;
+        case '1': nasobitel = 1; break;
+        case '10': nasobitel = 10; break;
+        case '100': nasobitel = 100; break;
+        case '1k': nasobitel = 1000; break;
+        case '10k': nasobitel = 10000; break;
+        case '100k': nasobitel = 100000; break;
+        case '1M': nasobitel = 1000000; break;
+        case '10M': nasobitel = 10000000; break;
+    }
+    var vysledok = (zaklad * nasobitel).toFixed(2);
+    vysledok = formatNumber(vysledok);
+
+    result.innerHTML = vysledok + ' &#177;' + tmpx + '%';
+}
+
+function formatNumber(num) {
+    return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1 ');
+  }

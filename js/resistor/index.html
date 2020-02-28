@@ -7,45 +7,46 @@
     <style>
         button {
             width: 24px;
-            height: 125px;
+            height: 126px;
             border: none;
             outline: none;
+            margin: 0 auto;
         }
 
         body {
-            background-image: url('resistor.png');
+            background-image: url('resistor.jpg');
             background-repeat: no-repeat;
-            background-size: 772px;
+            background-size: 612px;
+            background-position: center top;
         }
 
         .container {
             position: relative;
             width: 100%;
-            max-width: 400px;
-            padding: 85px;
-            /* border: 1px solid red; */
-            padding-left: 250px;
+            padding-top: 85px;   
+            text-align: center;
         }
 
         .container .plusMinus {
             display: inline-block;
-            /* border: 1px solid red; */
-            margin-left: 45px;
+            margin-left: 2.5vw;
         }
 
-        .prve, .druhe, .tretie {
-            margin-left: 12px;
-            /* border: 1px solid blue; */
+        .prve,
+        .druhe,
+        .tretie {
+            margin-left: 1vw;
             display: inline-block;
         }
 
         .hodnota {
             display: inline-block;
-            /* border: 1px solid red; */
         }
 
-        #score, #hodnota {
-            margin-left: 295px;
+        #score,
+        #hodnota {
+            text-align: center;
+            font-size: 3em;
         }
     </style>
 </head>
@@ -69,7 +70,7 @@
     </div>
     <br>
     <p id="score">10x0.01&#x2126; &#177;10%</p>
-    <p id="hodnota"></p>
+    <strong><p id="hodnota"></p></strong>
     <script src="script.js"></script>
 </body>
 

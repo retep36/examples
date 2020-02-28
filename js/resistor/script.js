@@ -99,7 +99,7 @@ function prepocet(tmp1, tmp2, tmp, tmpx){
     var vysledok = (zaklad * nasobitel).toFixed(2);
     vysledok = formatNumber(vysledok);
 
-    result.innerHTML = vysledok + ' &#177;' + tmpx + '%';
+    result.innerHTML = vysledok + '&#x2126; &#177;' + tmpx + '%';
 }
 
 function formatNumber(num) {

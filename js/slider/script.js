@@ -5,24 +5,29 @@ var images = [
 	'<img src="img4.jpg">'  //3
 ];
 
-var index = 0;
+var time, index = 0;
 
-function slideShow(){
+slideShow();
+
+function slideShow() {
 	document.getElementById('slider').innerHTML = images[index];
-	index++;
+	index = index + 1;
 	index == images.length ? index = 0 : null;
+	time = setTimeout(function() { slideShow() }, 3000);
 }
 
-function prev(){
+function prev() {
+	clearTimeout(time);
 	var tmp = index - 2;
-	tmp == -2 ? tmp = images.length-2 : false; 
-	tmp == -1 ? tmp = images.length-1 : false; 
+	tmp == -2 ? tmp = images.length - 2 : false;
+	tmp == -1 ? tmp = images.length - 1 : false;
 	index = tmp;
 	document.getElementById('slider').innerHTML = images[index];
-	slideShow();
+	slideShow();	
 }
 
-function next(){
+function next() {
+	clearTimeout(time);
 	document.getElementById('slider').innerHTML = images[index];
 	slideShow();
 }

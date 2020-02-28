@@ -1,0 +1,3 @@
+include ':app', ':UIReferenceImplementation'
+
+project(':UIReferenceImplementation').dir = new File(settingsDir, 'UIReferenceImplementation')

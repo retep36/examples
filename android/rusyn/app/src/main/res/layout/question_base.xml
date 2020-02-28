@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2C6B7A">
+
+
+    <TextView
+        android:id="@+id/descriptionQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textAlignment="center"
+        android:textSize="22sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textQuestion"
+        android:layout_below="@id/descriptionQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="40sp"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/numberOfQuestion"
+        android:layout_below="@id/textQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="" />
+
+
+    <Button
+        android:id="@+id/buttonContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#011E4F"
+        android:layout_centerVertical="true"
+        android:visibility="invisible"
+        android:text="@string/button_Continue" />
+
+    <TextView
+        android:id="@+id/infoQuestio4"
+        android:layout_below="@id/buttonContinue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:text="@string/infoQuestion4" />
+
+
+    <EditText
+        android:id="@+id/dopisOdpoved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:ems="20"
+        android:inputType="textPersonName"
+        android:visibility="invisible"
+        android:text="" />
+
+    <Button
+        android:id="@+id/buttonOver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="#011E4F"
+        android:visibility="invisible"
+        android:layout_below="@id/dopisOdpoved"
+        android:text="@string/btn_Over" />
+
+    <TextView
+        android:id="@+id/infoQuestion3"
+        android:layout_below="@id/buttonOver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:text="@string/infoQuestion3" />
+
+    <ListView
+        android:id="@+id/simpleListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#000"
+        android:dividerHeight="2dp"
+        android:listSelector="#600"
+        android:layout_marginTop="120dp">
+    </ListView>
+
+</RelativeLayout>

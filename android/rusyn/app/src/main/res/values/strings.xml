@@ -1,0 +1,69 @@
+<resources>
+    <string name="app_name">rusyn</string>
+    <string name="name">naučte sa po\nRusínsky</string>
+    <string name="nazov">aplikácia na výučbu rusínskeho jazyka</string>
+    <string name="btn_zaklady">1. ZÁKLADY </string>
+    <string name="btn_oslovenia">2. POZDRAVY</string>
+    <string name="btn_tretia">3. OSLOVENIA</string>
+    <string name="btn_stvrta">4. SLOVNÁ ZÁSOBA I.</string>
+    <string name="btn_piata">5. OPAKOVANIE I.</string>
+    <string name="btn_siesta">6. RODINA</string>
+    <string name="btn_siedma">7. SLOVESO BYŤ</string>
+    <string name="btn_osma">8. PROFESIE</string>
+    <string name="btn_deviata">9. SLOVNÁ ZÁSOBA II.</string>
+
+    <string name="text_lekcia">LEKCIA</string>
+    <string name="text_info">V LEKCII PRECVIČITE:</string>
+    <string name="button_spat">SPäŤ</string>
+    <string name="button_pokracuj">POKRAČUJ</string>
+    <string name="otazka">Vyber správnu odpoveď</string>
+
+    <string name="btn_odhlasenie">ODHLÁSIŤ SA</string>
+    <string name="user_profil">Profil</string>
+    <string name="user_email">Email:</string>
+    <string name="btn_Over">Pokračuj</string>
+    <string name="button_Continue">Prejdi na odpoveď</string>
+    <string name="sum_skore">Skóre</string>
+    <string name="sum_nasledujuca">Nasleduje otázka</string>
+    <string name="buttonNext">Pokračuj</string>
+    <string name="spravne">Správne</string>
+    <string name="nespravne">Nesprávne</string>
+    <string name="score_textSkore">Tvoje skóre:</string>
+    <string name="score_button_menu">Ukončiť lekciu</string>
+    <string name="score_button_opakuj">Zopakovať lekciu</string>
+    <string name="menu_convert">Pokračuj</string>
+    <string name="infoQuestion3">Pomôcka:\nNapíšte odpoveď s diakritikou</string>
+    <string name="infoQuestion4">Pomôcka:\nNapíšte odpoveď s diakritikou\nNepresahujte cez dva riadky</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="action_search">Search</string>
+    <string name="action_user">Používateľ</string>
+    <string name="jazyk">Jazyk</string>
+    <string name="about_us">O nás</string>
+    <string name="odhlasenie">Odhlásiť sa</string>
+    <string name="text_spravnaOdpoved">Správna odpoveď:</string>
+    <string name="text_koniecLekcie">Koniec lekcie</string>
+    <string name="oNas">O nás</string>
+    <string name="oNasText">autor: Peter Varchola\nvedúci práce: Ing. Ján Perháč\n\nmateriály: Rusínsky jazyk pre začiatočníkov\n(autorky: Plíšková Anna, Koporová Kvetoslava)</string>
+    <string name="prihlasenie">PRIHLÁSENIE</string>
+
+    <string name="percento">0%</string>
+
+    <string name="btn_spat">SPäŤ</string>
+
+
+    <string name="inputMode_forceTouch">Touch</string>
+    <string name="menu_inputMode">Input mode</string>
+    <string name="menu_undo">Undo</string>
+    <string name="menu_redo">Redo</string>
+    <string name="menu_clear">Clear</string>
+
+    <string name="menu_export">Export</string>
+    <string name="exportType_title">Export - select type</string>
+    <string name="exportPackage_title">Export - select file</string>
+    <string name="addImage_title">Add image - select file</string>
+    <string name="inputMode_title">Input mode - select behavior</string>
+
+</resources>

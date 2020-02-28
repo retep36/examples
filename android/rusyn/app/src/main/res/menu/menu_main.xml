@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".screens.ListOfLessons">
+    <item
+        android:id="@+id/user"
+        android:icon="@drawable/account"
+        android:title="@string/action_user"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/about_us"
+        android:orderInCategory="101"
+        android:title="@string/about_us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/odhlasenie"
+        android:orderInCategory="102"
+        android:title="@string/odhlasenie"
+        app:showAsAction="never" />
+
+
+</menu>

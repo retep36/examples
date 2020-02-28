@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sk.tuke.rusyn.screens.Score"
+    android:background="#2C6B7A">
+
+    <TextView
+        android:id="@+id/text_koniecLekcie"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:text="@string/text_koniecLekcie" />
+
+    <TextView
+        android:id="@+id/score_textSkore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textSize="15sp"
+        android:layout_below="@id/text_koniecLekcie"
+        android:textAlignment="center"
+        android:text="@string/score_textSkore" />
+
+    <TextView
+        android:id="@+id/score_skore"
+        android:layout_below="@id/score_textSkore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="35sp"
+        android:textAlignment="center"
+        android:text="" />
+
+    <Button
+        android:id="@+id/share_button"
+        android:layout_below="@id/score_skore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="Share on Google+"
+    />
+
+    <Button
+        android:id="@+id/score_button_opakuj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/share_button"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/score_button_opakuj" />
+
+    <Button
+        android:id="@+id/score_button_menu"
+        android:layout_below="@id/score_button_opakuj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#011E4F"
+        android:text="@string/score_button_menu" />
+</RelativeLayout>

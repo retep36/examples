@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sk.tuke.rusyn.questions.SumActivity"
+    android:background="#2C6B7A">
+
+    <TextView
+        android:id="@+id/sum_skore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:text="@string/sum_skore" />
+
+    <TextView
+        android:id="@+id/textViewSkore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_below="@id/sum_skore"
+        android:textSize="50sp"
+        android:text="4" />
+
+    <TextView
+        android:id="@+id/sum_nasledujuca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewSkore"
+        android:textAlignment="center"
+        android:layout_marginTop="40dp"
+        android:textSize="20sp"
+        android:text="@string/sum_nasledujuca" />
+
+    <TextView
+        android:id="@+id/textViewPos"
+        android:layout_below="@id/sum_nasledujuca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:text="4" />
+
+    <TextView
+        android:id="@+id/spravne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewPos"
+        android:background="#8DC44D"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:text="@string/spravne" />
+
+    <TextView
+        android:id="@+id/nespravne"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textViewPos"
+        android:background="#CA2323"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:text="@string/nespravne" />
+
+    <TextView
+        android:id="@+id/text_spravnaOdpoved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/nespravne"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        android:text="@string/text_spravnaOdpoved" />
+
+    <TextView
+        android:id="@+id/spravnaOdpoved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:layout_below="@id/text_spravnaOdpoved"
+        android:textColor="#FFFFFF"
+        android:visibility="invisible"
+        android:text="" />
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_below="@id/spravnaOdpoved"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:background="#011E4F"
+        android:text="@string/buttonNext" />
+</RelativeLayout>

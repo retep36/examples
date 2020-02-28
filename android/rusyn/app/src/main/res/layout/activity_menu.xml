@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="sk.tuke.rusyn.screens.ListOfLessons">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/nazov"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#4E2E59"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/nazov" />
+
+        <Button
+            android:id="@+id/btn_zaklady"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/nazov"
+            android:background="@drawable/menu_button_shape1"
+            android:alpha="0.9"
+            android:text="@string/btn_zaklady"
+        />
+
+        <TextView
+            android:id="@+id/percento1"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_zaklady"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#4E2E59"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_pozdravy"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento1"
+            android:background="@drawable/menu_button_shape2"
+            android:text="@string/btn_oslovenia"
+        />
+
+        <TextView
+            android:id="@+id/percento2"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_pozdravy"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#A14C51"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_oslovenia"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento2"
+            android:background="@drawable/menu_button_shape3"
+            android:text="@string/btn_tretia"
+            />
+
+        <TextView
+            android:id="@+id/percento3"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_oslovenia"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#2C6B7A"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_slovZasoba1"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento3"
+            android:background="@drawable/menu_button_shape4"
+            android:text="@string/btn_stvrta"
+            />
+
+        <TextView
+            android:id="@+id/percento4"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_slovZasoba1"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#AB5930"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_frazy1"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento4"
+            android:background="@drawable/menu_button_shape5"
+            android:text="@string/btn_piata"
+            />
+
+        <TextView
+            android:id="@+id/percento5"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_frazy1"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#1D8052"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_rodina"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento5"
+            android:background="@drawable/menu_button_shape1"
+            android:text="@string/btn_siesta"
+            />
+
+        <TextView
+            android:id="@+id/percento6"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_rodina"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#4E2E59"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_siedma"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento6"
+            android:background="@drawable/menu_button_shape2"
+            android:text="@string/btn_siedma"
+            />
+
+        <TextView
+            android:id="@+id/percento7"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_siedma"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#A14C51"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_osma"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento7"
+            android:background="@drawable/menu_button_shape3"
+            android:text="@string/btn_osma"
+            />
+
+        <TextView
+            android:id="@+id/percento8"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_osma"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#2C6B7A"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+        <Button
+            android:id="@+id/btn_deviata"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.9"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/percento8"
+            android:background="@drawable/menu_button_shape4"
+            android:text="@string/btn_deviata"
+            />
+
+        <TextView
+            android:id="@+id/percento9"
+            android:layout_height="wrap_content"
+            style="@android:style/Widget.Button"
+            android:layout_below="@id/btn_deviata"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:alpha="0.9"
+            android:layout_marginBottom="10dp"
+            android:background="#AB5930"
+            android:text="@string/percento"
+            android:layout_width="match_parent">
+        </TextView>
+
+    </RelativeLayout>
+</ScrollView>

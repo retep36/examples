@@ -1,25 +1,76 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Resistors</title>
-        
-        <style>
-            button {
-                width: 2em;
-                height: 10em;
-                border: none;
-                outline: none;
-            }
-        </style>
-    </head>
-        <button id="prve" onclick="changeColor(this.id)"></button>
-        <button id="druhe" onclick="changeColor(this.id)"></button>
-        <button id="tretie" onclick="changeColor(this.id)"></button>
-        <button id="stvrte" onclick="changeColor(this.id)"></button>
 
-        <br>
-        <p id="score">10x0.01&#x2126; &#177;10%</p>
-        <p id="hodnota"></p>
-        <script src="script.js"></script>
-    </body>
+<head>
+    <title>Resistors</title>
+
+    <style>
+        button {
+            width: 24px;
+            height: 125px;
+            border: none;
+            outline: none;
+        }
+
+        body {
+            background-image: url('resistor.png');
+            background-repeat: no-repeat;
+            background-size: 772px;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 400px;
+            padding: 85px;
+            /* border: 1px solid red; */
+            padding-left: 250px;
+        }
+
+        .container .plusMinus {
+            display: inline-block;
+            /* border: 1px solid red; */
+            margin-left: 45px;
+        }
+
+        .prve, .druhe, .tretie {
+            margin-left: 12px;
+            /* border: 1px solid blue; */
+            display: inline-block;
+        }
+
+        .hodnota {
+            display: inline-block;
+            /* border: 1px solid red; */
+        }
+
+        #score, #hodnota {
+            margin-left: 295px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hodnota">
+            <div class="prve">
+                <button id="prve" onclick="changeColor(this.id)"></button>
+            </div>
+            <div class="druhe">
+                <button id="druhe" onclick="changeColor(this.id)"></button>
+            </div>
+            <div class="tretie">
+                <button id="tretie" onclick="changeColor(this.id)"></button>
+            </div>
+        </div>
+        <div class="plusMinus">
+            <button id="stvrte" onclick="changeColor(this.id)"></button>
+        </div>
+    </div>
+    <br>
+    <p id="score">10x0.01&#x2126; &#177;10%</p>
+    <p id="hodnota"></p>
+    <script src="script.js"></script>
+</body>
+
 </html>

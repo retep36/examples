@@ -1,5 +1,5 @@
 var prve, druhe, tretie, stvrte;
-var tmp1 = 1, tmp2 = 0, tmp3 = 'x0,01&#x2126;', tmp4 = '&#xb1;10%', tmpx;
+var tmp1 = 1, tmp2 = 0, tmp3 = 'x0,01&#x2126;', tmp4 = '&#xb1;10%';
 
 $(function () {
     colors = [
@@ -64,11 +64,7 @@ $('.tlacidlo').click(function () {
             break;
         case 'stvrte':
             index = getOffsetColor(stvrte.css('background-color'));
-            if (index == 4) {
-                stvrte.css('border', 'none');
-            }
             if (index == 5) {
-                stvrte.css('border', '1px solid black');
                 index = 0;
             }
             index++;

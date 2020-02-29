@@ -3,27 +3,60 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Resistors</title>
+    <title>jQuery</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
         button {
-            width: 2em;
-            height: 10em;
-            border: 1px solid black;
+            width: 24px;
+            height: 126px;
+            border: none;
             outline: none;
+            margin: 0 auto;
+        }
+
+        body {
+            background-image: url('resistor.jpg');
+            background-repeat: no-repeat;
+            background-size: 612px;
+            background-position: center top;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            padding-top: 85px;
+            text-align: center;
+        }
+
+        .odchylka {
+            display: inline-block;
+            margin-left: 2.5vw;
+        }
+
+        .rezistor {
+            display: inline-block;
+        }
+
+        #score,
+        #aktualnaHodnota {
+            text-align: center;
+            font-size: 3em;
         }
     </style>
 </head>
 
 <body>
-    <div class="rezistor">
-        <button class="tlacidlo" id="prve"></button>
-        <button class="tlacidlo" id="druhe"></button>
-        <button class="tlacidlo" id="tretie"></button>
-        <button class="tlacidlo" id="stvrte"></button>
+    <div class="container">
+        <div class="rezistor">
+            <button class="tlacidlo" id="prve"></button>
+            <button class="tlacidlo" id="druhe"></button>
+            <button class="tlacidlo" id="tretie"></button>
+        </div>
+        <div class="odchylka">
+            <button class="tlacidlo" id="stvrte"></button>
+        </div>
     </div>
-
     <br>
     <p id="score">10x0,01&#x2126; ±10%</p>
     <p id="aktualnaHodnota">0.1&#x2126; ±10%</p>

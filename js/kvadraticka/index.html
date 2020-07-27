@@ -2,6 +2,7 @@
 <html lang="sk">
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
     <title>Kvadraticka rovnica</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href=" style.css">
@@ -12,8 +13,8 @@
       Kvadratická rovnica - Javascript
     </p>
     <div class="main">
-      <input type="text" id="rovnica" placeholder="4x^2+4x-1" value="" onKeyUp="validateEquation()">
-      <input type="submit" id="rovnaSa" name="equal" value="=" disabled="true" onclick="vypocet()">
+      <input type="text" id="rovnica" placeholder="4x^2+4x-1" value="" autofocus onKeyUp="validateEquation()">
+      <input type="submit" id="rovnaSa" name="equal" value="=" disabled="true" onclick="calculate()">
     </div>
     <div class="other">
       <span id="vysledok"></span>

@@ -1,49 +1,75 @@
-function validateEquation(){
-  var equation2 = document.getElementById('rovnica')
-  var equation = document.getElementById('rovnica').value;
-  var info = document.getElementById('info');
+function validateEquation() {
+  let equationValue = document.getElementById('rovnica').value;
+  let foundRegex = equationValue.match(/[-]?[1-9]*x\^2([+-][1-9]*x)?([+-][0-9]+)?$/g);
 
-  var regex = /[0-9]+x\^2[+-][0-9]+x[+-][0-9]+/g;
-  var found = equation.match(regex);
-
-  if(found != null){
-    equation2.style.backgroundColor = "#29a329";
+  if (foundRegex != null) {
+    document.getElementById('rovnica').style.backgroundColor = "#29a329";
     document.getElementById('rovnaSa').disabled = false;
-    var hotovo = found.toString();
+    return foundRegex.toString();
   }
   else {
-    equation2.style.backgroundColor = "#cc0000";
+    document.getElementById('rovnica').style.backgroundColor = "#cc0000";
   }
-  return hotovo;
 }
 
-function vypocet(){
-  var output = document.getElementById('vysledok');
-  var celaRovnica = document.getElementById('rovnica').value;
-  var a = celaRovnica.match(/^[0-9]+/g);
-  var zmaz = celaRovnica.match(/[0-9]+x\^2[+-]/g);
-  celaRovnica = celaRovnica.replace(zmaz,"");
-  var b = celaRovnica.match(/^[0-9]+/g);
-  zmaz = celaRovnica.match(/[0-9]+x[+-]/g);
-  celaRovnica = celaRovnica.replace(zmaz,"");
-  var c = celaRovnica;
-  var d = (b*b)-(4*a*c);
+function calculate() {
+  let output = document.getElementById('vysledok');
+  let equation = document.getElementById('rovnica').value;
 
-  if(d>0){
-    var prepocet = Math.sqrt(d);
-    var x1 = ((-b)+prepocet)/(2*a);
-    var x2 = ((-b)-prepocet)/(2*a);
-    x1 = x1.toFixed(5);
-    x2 = x2.toFixed(5);
-    output.innerHTML ='Prvy koren:'+ x1 + ', druhy koren:' + x2;
-  }
+  let a = getA(equation);
+  equation = equation.replace(equation.match(/[-]?[1-9]*x\^2/g), "");
+  let b = getB(equation);
+  equation = equation.replace(equation.match(/[+-][1-9]*x/g), "");
+  let c = equation;
 
-  if(d==0){
-    var x =(-b)/(2*a);
-    output.innerHTML = x;
+  let discriminant = ((b * b) - 4 * a * c);
+  if (discriminant > 0) {
+    let x1 = ((-b) + Math.sqrt(discriminant)) / (2 * a);
+    let x2 = ((-b) - Math.sqrt(discriminant)) / (2 * a);
+    if(!Number.isInteger(x1)){
+      x1 = x1.toFixed(3);
+    }
+    if(!Number.isInteger(x2)){
+      x2 = x2.toFixed(3);
+    }
+    output.innerHTML = `Prvy koren: <strong>${x1}</strong>, druhy koren: <strong>${x2}</strong>`;
   }
+  if (discriminant == 0) {
+    let x = (-b) / (2 * a);
+    output.innerHTML = `${x}`;
+  }
+  if (discriminant < 0) {
+    output.innerHTML = `Rovnica nema riesenie v mnozine realnych cisel`;
+  }
+}
 
-  if(d<0){
-    output.innerHTML = "Rovnica nema riesenie v mnozine realnych cisel";
+function getA(equation){
+    let a;
+    if (equation.match(/^x\^2/g)) {
+      a = 1;
+    }
+    else if (equation.match(/^-x\^2/g)) {
+      a = -1;
+    }
+    else if (equation.match(/^[-]?[1-9]*x\^2/g)) {
+      a = equation.match(/^[-]?[1-9]*/g);
+    }
+    return a;
+}
+
+function getB(equation){
+  let b;
+  if (equation.match(/^\+x/g) == "+x") {
+    b = 1;
   }
+  else if (equation.match(/^-x/g) == "-x") {
+    b = -1;
+  }
+  else if (equation.match(/[+-][1-9]*x/g)) {
+    b = equation.match(/^[+-][1-9]*/g);
+  }
+  else if (b === undefined) {
+    b = 0;
+  }
+  return b;
 }

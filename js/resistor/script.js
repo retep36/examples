@@ -1,54 +1,54 @@
-colors = [
+const colors = [
     'silver', 'gold', 'black',
     'brown', 'red', 'orange',
     'yellow', 'green', 'blue',
     'purple', 'gray', 'white'
 ];
 
-offset = ['silver', 'gold', 'brown', 'red', 'green', 'white']
+const offset = ['silver', 'gold', 'brown', 'red', 'green', 'white']
 
-var index, tmp1 = 1, tmp2 = 0, tmp3 = -2, tmp4 = -1, tmpx;
-var prve, druhe, tretie, stvrte;
+let index, tmp1 = 1, tmp2 = 0, tmp3 = -2, tmp4 = -1, tmpx;
+let firstColor, secondColor, thirdColor, fourthColor;
 
-prve = document.getElementById("prve");
-prve.style.backgroundColor = colors[3];
-druhe = document.getElementById("druhe");
-druhe.style.backgroundColor = colors[2];
-tretie = document.getElementById("tretie");
-tretie.style.backgroundColor = colors[0];
-stvrte = document.getElementById("stvrte");
-stvrte.style.backgroundColor = offset[0];
-var daco = document.getElementById("score");
+firstColor = document.getElementById("prve");
+firstColor.style.backgroundColor = colors[3];
+secondColor = document.getElementById("druhe");
+secondColor.style.backgroundColor = colors[2];
+thirdColor = document.getElementById("tretie");
+thirdColor.style.backgroundColor = colors[0];
+fourthColor = document.getElementById("stvrte");
+fourthColor.style.backgroundColor = offset[0];
+let actualScore = document.getElementById("score");
 
 function changeColor(clickedId) {
     if (clickedId == 'prve') {
-        index = colors.indexOf(prve.style.backgroundColor);
+        index = colors.indexOf(firstColor.style.backgroundColor);
         if (index == 11) index = 2;
         tmp1 = index - 1;
-        prve.style.backgroundColor = colors[++index];
+        firstColor.style.backgroundColor = colors[++index];
     }
     if (clickedId == 'druhe') {
-        index = colors.indexOf(druhe.style.backgroundColor);
+        index = colors.indexOf(secondColor.style.backgroundColor);
         if (index == 11) index = 1;
         tmp2 = index - 1;
-        druhe.style.backgroundColor = colors[++index];
+        secondColor.style.backgroundColor = colors[++index];
     }
     if (clickedId == 'tretie') {
-        index = colors.indexOf(tretie.style.backgroundColor);
+        index = colors.indexOf(thirdColor.style.backgroundColor);
         if (index == 9) index = -1;
         tmp3 = index - 1;
-        tretie.style.backgroundColor = colors[++index];
+        thirdColor.style.backgroundColor = colors[++index];
     }
     if (clickedId == 'stvrte') {
-        index = offset.indexOf(stvrte.style.backgroundColor);
+        index = offset.indexOf(fourthColor.style.backgroundColor);
         if (index == 5) index = -1; 
         tmp4 = index;   
-        stvrte.style.backgroundColor = offset[++index];
+        fourthColor.style.backgroundColor = offset[++index];
     }
     setThirdValue();
     setFourthValue();
-    daco.innerHTML = tmp1.toString() + tmp2.toString() + tmp.toString() + '&#x2126; &#177;' + tmpx + '%';
-    prepocet(tmp1, tmp2, tmp, tmpx);
+    actualScore.innerHTML = `${tmp1.toString()}${tmp2.toString()}${tmp.toString()}&#x2126; &#177;${tmpx}%`;
+    reduction(tmp1, tmp2, tmp, tmpx);
 }
 
 function setThirdValue(){
@@ -79,27 +79,27 @@ function setFourthValue(){
     }
 }
 
-function prepocet(tmp1, tmp2, tmp, tmpx){
-    var result = document.getElementById('hodnota');
-    var zaklad = tmp1 + '' + tmp2;
-    console.log(zaklad);
-    var nasobitel = (tmp.replace('x', ''));
-    switch(nasobitel){
-        case '0.01': nasobitel = 0.01; break;
-        case '0.1': nasobitel = 0.1; break;
-        case '1': nasobitel = 1; break;
-        case '10': nasobitel = 10; break;
-        case '100': nasobitel = 100; break;
-        case '1k': nasobitel = 1000; break;
-        case '10k': nasobitel = 10000; break;
-        case '100k': nasobitel = 100000; break;
-        case '1M': nasobitel = 1000000; break;
-        case '10M': nasobitel = 10000000; break;
+function reduction(tmp1, tmp2, tmp, tmpx){
+    let result = document.getElementById('hodnota');
+    let base = `${tmp1}${tmp2}`;
+    console.log(base);
+    let multiplier = (tmp.replace('x', ''));
+    switch(multiplier){
+        case '0.01': multiplier = 0.01; break;
+        case '0.1': multiplier = 0.1; break;
+        case '1': multiplier = 1; break;
+        case '10': multiplier = 10; break;
+        case '100': multiplier = 100; break;
+        case '1k': multiplier = 1000; break;
+        case '10k': multiplier = 10000; break;
+        case '100k': multiplier = 100000; break;
+        case '1M': multiplier = 1000000; break;
+        case '10M': multiplier = 10000000; break;
     }
-    var vysledok = (zaklad * nasobitel).toFixed(2);
-    vysledok = formatNumber(vysledok);
+    let finalScore = (base * multiplier).toFixed(2);
+    finalScore = formatNumber(finalScore);
 
-    result.innerHTML = vysledok + '&#x2126; &#177;' + tmpx + '%';
+    result.innerHTML = `${finalScore}&#x2126; &#177;${tmpx}%`;
 }
 
 function formatNumber(num) {
